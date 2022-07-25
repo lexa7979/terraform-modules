@@ -1,0 +1,17 @@
+# Terraform
+
+## Interesting details
+
+- Store state remotely
+  https://www.terraform.io/language/state/remote
+  > The Terraform state file is the only way Terraform can track which resources it manages, and often contains sensitive information, so you must store your state file securely and restrict access to only trusted team members who need to manage your infrastructure. In production, we recommend storing your state remotely with Terraform Cloud or Terraform Enterprise. Terraform also supports several other remote backends you can use to store and manage your state.
+
+# AWS glossary
+
+- AMI: Amazon Machine Images
+  https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
+
+- VPC: Virtual Private Cloud
+  https://eu-north-1.console.aws.amazon.com/vpc/home
+
+- EC2: Elastic Compute Cloud
