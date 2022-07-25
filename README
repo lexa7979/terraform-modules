@@ -4,7 +4,12 @@
 
 - Store state remotely
   https://www.terraform.io/language/state/remote
+
   > The Terraform state file is the only way Terraform can track which resources it manages, and often contains sensitive information, so you must store your state file securely and restrict access to only trusted team members who need to manage your infrastructure. In production, we recommend storing your state remotely with Terraform Cloud or Terraform Enterprise. Terraform also supports several other remote backends you can use to store and manage your state.
+
+- Variables
+  https://learn.hashicorp.com/tutorials/terraform/variables?in=terraform/configuration-language
+  > Setting variables via the command-line will not save their values. Terraform supports many ways to use and set variables so you can avoid having to enter them repeatedly as you execute commands. To learn more, follow our in-depth tutorial, Customize Terraform Configuration with Variables.
 
 # AWS glossary
 
