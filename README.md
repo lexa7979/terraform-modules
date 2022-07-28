@@ -9,7 +9,12 @@
 
 - Variables
   https://learn.hashicorp.com/tutorials/terraform/variables?in=terraform/configuration-language
+
   > Setting variables via the command-line will not save their values. Terraform supports many ways to use and set variables so you can avoid having to enter them repeatedly as you execute commands. To learn more, follow our in-depth tutorial, Customize Terraform Configuration with Variables.
+
+- Use VCS-Driven Workflow with Terraform Cloud
+  https://learn.hashicorp.com/tutorials/terraform/cloud-vcs-change?in=terraform/cloud-get-started
+  > In addition to the CLI-driven workflow, Terraform Cloud offers a VCS-driven workflow that automatically triggers runs based on changes to your VCS repositories. The CLI-driven workflow allows you to quickly iterate on your configuration and work locally, while the VCS-driven workflow enables collaboration within teams by establishing your shared repositories as the source of truth for infrastructure configuration.
 
 # AWS glossary
 

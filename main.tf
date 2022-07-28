@@ -6,16 +6,24 @@ terraform {
     }
   }
 
+  cloud {
+    organization = "lexa79"
+
+    workspaces {
+      name = "learn-terraform-cloud"
+    }
+  }
+
   required_version = ">= 1.2.0"
 }
 
 provider "aws" {
-  region = "eu-north-1"
+  region = var.region
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-0440e5026412ff23f"
-  instance_type = "t3.micro"
+  ami           = var.instance_ami
+  instance_type = var.instance_type
 
   tags = {
     Name = var.instance_name
