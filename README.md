@@ -16,6 +16,16 @@
   https://learn.hashicorp.com/tutorials/terraform/cloud-vcs-change?in=terraform/cloud-get-started
   > In addition to the CLI-driven workflow, Terraform Cloud offers a VCS-driven workflow that automatically triggers runs based on changes to your VCS repositories. The CLI-driven workflow allows you to quickly iterate on your configuration and work locally, while the VCS-driven workflow enables collaboration within teams by establishing your shared repositories as the source of truth for infrastructure configuration.
 
+## `terraform init`
+
+## `terraform plan` and `terraform apply`
+
+## `terraform output`
+
+## `terraform graph`
+
+- http://dreampuf.github.io/GraphvizOnline/
+
 # AWS glossary
 
 - AMI: Amazon Machine Images
@@ -25,3 +35,6 @@
   https://eu-north-1.console.aws.amazon.com/vpc/home
 
 - EC2: Elastic Compute Cloud
+
+- ASG: Auto Scaling Group
+  > An ASG takes care of a lot of tasks for you completely automatically, including launching a cluster of EC2 Instances, monitoring the health of each Instance, replacing failed Instances, and adjusting the size of the cluster in response to load.

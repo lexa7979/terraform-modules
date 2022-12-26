@@ -31,6 +31,7 @@ resource "aws_instance" "app_server" {
               echo "Dummy webserver running" > index.html
               nohup busybox httpd -f -p ${var.webserver_port} &
               EOF
+  user_data_replace_on_change = true
 
   tags = {
     Name = var.instance_name
