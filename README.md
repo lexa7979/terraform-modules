@@ -18,15 +18,19 @@
 
 ## `terraform init`
 
-## `terraform plan` and `terraform apply`
-
-## `terraform output`
-
 ## `terraform graph`
 
 - http://dreampuf.github.io/GraphvizOnline/
 
+## `terraform plan` and `terraform apply`
+
+## `terraform output`
+
+## `terraform destroy`
+
 # AWS glossary
+
+> "Amazon Web Services in Plain English": https://expeditedsecurity.com/aws-in-plain-english/
 
 - AMI: Amazon Machine Images
   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
@@ -37,4 +41,11 @@
 - EC2: Elastic Compute Cloud
 
 - ASG: Auto Scaling Group
+
   > An ASG takes care of a lot of tasks for you completely automatically, including launching a cluster of EC2 Instances, monitoring the health of each Instance, replacing failed Instances, and adjusting the size of the cluster in response to load.
+
+- AZ: Availability Zone (datacenter)
+  https://aws.amazon.com/de/about-aws/global-infrastructure/regions_az/
+
+- ELB: Elastic Load Balancer
+  Three types: ALB (Application: HTTP, HTTPS), NLB (Network: TCP, UDP, TLS), CLB (Classic)
