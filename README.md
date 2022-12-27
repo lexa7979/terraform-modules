@@ -18,6 +18,10 @@
 
 ## `terraform init`
 
+- Changed backend
+- Changed provider
+- Changed modules
+
 ## `terraform graph`
 
 - http://dreampuf.github.io/GraphvizOnline/
@@ -32,6 +36,8 @@
 
 > "Amazon Web Services in Plain English": https://expeditedsecurity.com/aws-in-plain-english/
 
+- ARN: Amazon Resource Name
+
 - AMI: Amazon Machine Images
   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
 
@@ -43,6 +49,8 @@
 - ASG: Auto Scaling Group
 
   > An ASG takes care of a lot of tasks for you completely automatically, including launching a cluster of EC2 Instances, monitoring the health of each Instance, replacing failed Instances, and adjusting the size of the cluster in response to load.
+
+  > These days, you should actually be using a launch template (and the aws_launch_template resource) with ASGs rather than a launch configuration.
 
 - AZ: Availability Zone (datacenter)
   https://aws.amazon.com/de/about-aws/global-infrastructure/regions_az/

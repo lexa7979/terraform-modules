@@ -1,0 +1,13 @@
+{
+  "variable": {
+    "module_naming_prefix": {
+      "description": "Unique prefix to use for naming any service created inside the module",
+      "type": "string"
+    },
+    "webserver_port": {
+      "description": "The port the related instances will use for HTTP requests",
+      "type": "number",
+      "default": 8080
+    }
+  }
+}

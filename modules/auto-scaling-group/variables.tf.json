@@ -1,14 +1,8 @@
 {
   "variable": {
-    "region": {
-      "description": "AWS region",
-      "type": "string",
-      "default": "eu-north-1"
-    },
-    "instance_name": {
-      "description": "Value of the Name tag for the EC2 instance",
-      "type": "string",
-      "default": "ExampleAppServerInstanceJuly22"
+    "module_naming_prefix": {
+      "description": "Unique prefix to use for naming any service created inside the module",
+      "type": "string"
     },
     "instance_type": {
       "description": "Type of EC2 instance to provision",
@@ -24,6 +18,10 @@
       "description": "The port the server will use for HTTP requests",
       "type": "number",
       "default": 8080
+    },
+    "target_group_arn": {
+      "description": "ARN of the target group from the related load balancer and it's health check",
+      "type": "string"
     }
   }
 }
