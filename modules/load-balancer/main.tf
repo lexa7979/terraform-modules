@@ -7,15 +7,15 @@ locals {
 }
 
 # ALB (Application Load Balancer)
-resource "aws_lb" "module_alb" {
+resource "aws_lb" "module" {
   name = var.module_naming_prefix
   load_balancer_type = local.load_balancer_type
   subnets = data.aws_subnets.default.ids
-  security_groups = [aws_security_group.module_alb.id]
+  security_groups = [aws_security_group.module.id]
 }
 
 resource "aws_lb_listener" "http" {
-  load_balancer_arn = aws_lb.module_alb.arn
+  load_balancer_arn = aws_lb.module.arn
   port = local.http_port
   protocol = "HTTP"
 
@@ -30,7 +30,7 @@ resource "aws_lb_listener" "http" {
   }
 }
 
-resource "aws_lb_listener_rule" "module_alb" {
+resource "aws_lb_listener_rule" "module" {
   listener_arn = aws_lb_listener.http.arn
   priority = 100
 
@@ -42,11 +42,11 @@ resource "aws_lb_listener_rule" "module_alb" {
 
   action {
     type = "forward"
-    target_group_arn = aws_lb_target_group.module_alb.arn
+    target_group_arn = aws_lb_target_group.module.arn
   }
 }
 
-resource "aws_security_group" "module_alb" {
+resource "aws_security_group" "module" {
   name = "${var.module_naming_prefix}-sec"
 
   # TODO: Move into "aws_security_group_rule" (p. 145)
@@ -67,7 +67,7 @@ resource "aws_security_group" "module_alb" {
 }
 
 # Target Group to check instances
-resource "aws_lb_target_group" "module_alb" {
+resource "aws_lb_target_group" "module" {
   name = "${var.module_naming_prefix}-chk"
   port = var.webserver_port
   protocol = "HTTP"

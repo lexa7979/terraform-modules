@@ -4,8 +4,8 @@ locals {
   all_ips = ["0.0.0.0/0"]
 }
 
-resource "aws_autoscaling_group" "module_asg" {
-  launch_configuration = aws_launch_configuration.module_asg.name
+resource "aws_autoscaling_group" "module" {
+  launch_configuration = aws_launch_configuration.module.name
   vpc_zone_identifier = data.aws_subnets.default.ids
 
   target_group_arns = [var.target_group_arn]
@@ -21,10 +21,10 @@ resource "aws_autoscaling_group" "module_asg" {
   }
 }
 
-resource "aws_launch_configuration" "module_asg" {
+resource "aws_launch_configuration" "module" {
   image_id = var.instance_ami
   instance_type = var.instance_type
-  security_groups = [aws_security_group.module_asg.id]
+  security_groups = [aws_security_group.module.id]
 
   # TODO: Replace with templatefile("user-data.sh", ...) (p. 144 and chapter 3)
   user_data = <<-EOF
@@ -39,7 +39,7 @@ resource "aws_launch_configuration" "module_asg" {
   }
 }
 
-resource "aws_security_group" "module_asg" {
+resource "aws_security_group" "module" {
   name = "${var.module_naming_prefix}-sec"
 
   # TODO: Move into "aws_security_group_rule" (p. 145)
