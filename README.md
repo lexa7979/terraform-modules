@@ -32,6 +32,33 @@
 
 ## `terraform destroy`
 
+## Book "Terraform: Up and Running" (3rd edition)
+
+- Chapter 1 "Why Terraform"
+- Chapter 2 "Getting Started with Terraform"
+  - Elastic Compute Cloud
+  - Auto Scaling Group
+  - Elastic Load Balancer
+- Chapter 3 "How to Manage Terraform State"
+- Chapter 4 "How to Create Reusable Infrastructure with Terraform Modules"
+- Chapter 5 "Terraform Tips and Tricks: Loops, If-Statements, Deployment, and Gotchas"
+- Chapter 6 "Managing Secrets with Terraform"
+- Chapter 7 "Working with Multiple Providers"
+- Chapter 8 "Production-Grade Terraform Code"
+- Chapter 9 "How to Test Terraform Code"
+- Chapter 10 "How to Use Terraform as a Team"
+
+# Terraform Cloud
+
+- **Please note:** Local modules can be used inside subfolders (e.g. `source = "./modules/load-balancer"`) but not with relative paths leading out of the current working directory (e.g. `source = "../modules/load-balancer`).
+
+## Starting with new workspace
+
+- Adapt "terraform.cloud.workspaces.name" in main.tf
+- Run "terraform init"
+- Open workspace from https://app.terraform.io/app/lexa79/workspaces
+- On page "Variables" use "Apply variable set" and add set "AWS Credentials"
+
 # AWS glossary
 
 > "Amazon Web Services in Plain English": https://expeditedsecurity.com/aws-in-plain-english/

@@ -9,7 +9,7 @@ terraform {
   cloud {
     organization = "lexa79"
     workspaces {
-      name = "learn-terraform-cloud"
+      name = "stage-webserver-example"
     }
   }
 
@@ -21,9 +21,9 @@ provider "aws" {
 }
 
 module "auto_scaling_group" {
-  source = "./modules/auto-scaling-group"
+  source = "github.com/lexa7979/terraform-modules//modules/auto-scaling-group"
 
-  module_naming_prefix = "example-asg"
+  module_naming_prefix = "webserver-asg"
   instance_type = var.instance_type
   instance_ami = var.instance_ami
   webserver_port = var.webserver_port
@@ -31,8 +31,8 @@ module "auto_scaling_group" {
 }
 
 module "load_balancer" {
-  source = "./modules/load-balancer"
+  source = "github.com/lexa7979/terraform-modules//modules/load-balancer"
 
-  module_naming_prefix = "example-alb"
+  module_naming_prefix = "webserver-alb"
   webserver_port = var.webserver_port
 }
